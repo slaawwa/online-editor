@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Online</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        #editor {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+        }
+        #iframe {
+            height: 100%;
+            width: 50%;
+            display: inline-block;
+        }
+        #container {
+            height: 100%;
+            width: auto;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        header:not(:hover) {
+            opacity: .3;
+        }
+        header {
+            display: block;
+            position: fixed;
+            top: -15px;
+            z-index: 30;
+            left: -38px;
+        }
+    </style>
+</head>
+<body onload="ready('html')">
+    <header>
+        <nav>
+            <ul>
+                <li><button id="htmlJsonBtn">html/json</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="editor"></div>
+        <iframe id="iframe" frameborder="0"></iframe>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ace.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+</html>
